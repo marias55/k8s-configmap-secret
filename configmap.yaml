@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: db-configmap
+  labels:
+    app: db-app
+data:
+  database-name: detail
+  database-motor: mysql

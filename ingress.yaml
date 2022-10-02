@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress
+  labels:
+    app: webserver
+spec:
+  rules:
+   #- host:"foo.bar.com"
+   - http:
+       paths: 
+       - path: /helloapp
+         pathType: Prefix
+         backend:
+           service:
+             name: mysql
+             port:
+               number: 3303
